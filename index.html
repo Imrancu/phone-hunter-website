@@ -10,12 +10,12 @@
     <title>Phone Discoverer</title>
 </head>
 
-<body class="container text-center bg-gray">
-    <header class="mt-3 text-success fw-bold">
+<body class="container text-center bg-dark">
+    <header class="mt-3 text-white fw-bold">
         <h1>Discover Your Dream Phone!</h1>
     </header>
     <!-- search box here -->
-    <section class="mt-4 w-50 mx-auto">
+    <section class="my-4 w-50 mx-auto">
         <div class="input-group">
             <input id="discover-phone" type="text" class="form-control" placeholder="Write Your Phone Name" aria-label="Input group example" aria-describedby="btnGroupAddon2" />
             <button onclick="discoverPhone()" id="discover-btn" class="input-group-text bg-success text-white fw-bold" id="btnGroupAddon2">
@@ -23,6 +23,9 @@
         </button>
         </div>
     </section>
+
+    <!-- phone Discover Result -->
+    <div id="search-result" class="row row-cols-1 row-cols-md-3 g-4"></div>
 
     <!-- Javascript link -->
     <script src="js/app.js"></script>
