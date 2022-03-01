@@ -1,8 +1,11 @@
 const discoverPhone = () => {
-    fetch('https://openapi.programming-hero.com/api/phones?search=$%7BsearchText%7D')
+    const discoverPhone = document.getElementById('discover-phone');
+    const discoverText = discoverPhone.value;
+    // Empty input field 
+    discoverPhone.value = '';
+
+    const url = `https://openapi.programming-hero.com/api/phones?search=${discoverText}`;
+    fetch(url)
         .then(res => res.json())
-        .then(data => discoverDreamPhone(data))
-};
-const discoverDreamPhone = data => {
-    console.log(data.data)
+        .then(data => console.log(data.data))
 }
