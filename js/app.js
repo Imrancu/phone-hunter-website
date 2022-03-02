@@ -40,12 +40,10 @@ const phoneDetails = phoneId => {
     fetch(url)
         .then(res => res.json())
         .then(data => showPhoneDetails(data.data));
-
 };
 const showPhoneDetails = phone => {
     const singlePhoneDetails = document.getElementById('single-phone-details');
     const div = document.createElement('div');
-
     div.classList.add('card', 'px-5', 'mb-4', 'mx-auto');
     div.innerHTML = `
     <img src="${phone.image}" class="card-img-top w-25 mx-auto pt-4" alt="photo" />
@@ -70,5 +68,4 @@ const showPhoneDetails = phone => {
     // Hide previous phone details
     singlePhoneDetails.textContent = ''
     singlePhoneDetails.appendChild(div);
-
 };
