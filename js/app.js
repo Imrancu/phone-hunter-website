@@ -43,7 +43,6 @@ const phoneDetails = phoneId => {
 
 };
 const showPhoneDetails = phone => {
-    console.log(phone);
     const singlePhoneDetails = document.getElementById('single-phone-details');
     const div = document.createElement('div');
 
@@ -59,7 +58,12 @@ const showPhoneDetails = phone => {
             <li class="list-group-item">${phone.mainFeatures.memory}</li>
             <li class="list-group-item">${phone.mainFeatures.storage}</li>
             <li class="list-group-item">${phone.mainFeatures.sensors}</li>
-            <li class="list-group-item">${phone.others}</li>
+            <li class="list-group-item">${phone.others?.WLAN?phone.others.WLAN:"This Item is empty"}</li>
+            <li class="list-group-item">${phone.others?.Bluetooth?phone.others.Bluetooth:"This Item is empty"}</li>
+            <li class="list-group-item">${phone.others?.GPS?phone.others.GPS:"This Item is empty"}</li>
+            <li class="list-group-item">${phone.others?.USB?phone.others.USB:"This Item is empty"}</li>
+            <li class="list-group-item">${phone.others?.NFC?phone.others.NFC:"This Item is empty"}</li>
+            <li class="list-group-item">${phone.others?.Radio?phone.others.Radio:"This Item is empty"}</li>
         </ul>
     </div>
     `;
